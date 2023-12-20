@@ -57,3 +57,8 @@ section.slideshow img {
     height: auto;
     display: none;
 }
+
+section.events {
+    padding: 2rem;
+    background-color: #f7f7f7;
+}
