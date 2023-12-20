@@ -105,7 +105,7 @@
         </nav>
     </header>
 
-    <section class="applicant-info">
+<section class="applicant-info">
         <h2>Applicant Information</h2>
 
         <form action="process-application.php" method="post" onsubmit="return validateForm()">
@@ -119,7 +119,7 @@
             <input type="email" id="email" name="email" required>
 
             <label for="salaryExpectation">Salary Expectation:</label>
-            <input type="text" id="salaryExpectation" name="salaryExpectation">
+            <input type="text" id="salaryExpectation" name="salaryExpectation" pattern="\d+(\.\d{2})?" title="Please enter a valid number (e.g., 50000.00)">
 
             <label for="about">About:</label>
             <textarea id="about" name="about" rows="4" required></textarea>
@@ -139,9 +139,22 @@
             const fullName = document.getElementById('fullName').value;
             const applicationFor = document.getElementById('applicationFor').value;
             const email = document.getElementById('email').value;
+            const salaryExpectation = document.getElementById('salaryExpectation').value;
 
-            if (fullName.trim() === '' || applicationFor.trim() === '' || email.trim() === '') {
+            if (fullName.trim() === '' || applicationFor.trim() === '' || email.trim() === '' || salaryExpectation.trim() === '') {
                 alert('Please fill in all required fields.');
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            const minSalary = 30000.00;
+            if (parseFloat(salaryExpectation) < minSalary) {
+                alert('Salary expectation must be at least $30,000.00.');
                 return false;
             }
 
