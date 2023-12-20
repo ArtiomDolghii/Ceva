@@ -61,3 +61,21 @@ document.addEventListener('DOMContentLoaded', function () {
         eventsSection.appendChild(listItem);
     });
 });
+const images = document.querySelectorAll('img');
+
+images.forEach(image => {
+    image.addEventListener('touchstart', handleTouchStart);
+    image.addEventListener('touchend', handleTouchEnd);
+});
+
+function handleTouchStart(event) {
+    event.target.dataset.originalStyles = event.target.getAttribute('style');
+
+    event.target.style.filter = 'invert(100%)';
+    event.target.style.transform = 'scale(1.1)';
+}
+
+function handleTouchEnd(event) {
+    event.target.removeAttribute('style');
+    event.target.setAttribute('style', event.target.dataset.originalStyles);
+}
