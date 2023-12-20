@@ -83,3 +83,20 @@ section.team {
     width: 100%;
     border-radius: 50%;
 }
+
+section.shop {
+    padding: 2rem;
+}
+
+.product {
+    margin-bottom: 2rem;
+}
+
+.product img {
+    width: 100%;
+}
+
+.price {
+    font-weight: bold;
+    color: #cc6600;
+}
