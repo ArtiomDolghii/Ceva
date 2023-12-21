@@ -1,126 +1,61 @@
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-section.hero {
-    text-align: center;
-    padding: 2rem;
-    background-color: #eee;
-}
-
-section.menu {
-    padding: 2rem;
-}
-
-section.contact {
-    padding: 2rem;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-section.slideshow {
-    position: relative;
-    overflow: hidden;
-    height: 400px;
-}
-
-section.slideshow img {
+header img {
     width: 100%;
     height: auto;
-    display: none;
 }
 
-section.events {
-    padding: 2rem;
-    background-color: #f7f7f7;
+.main-content {
+    text-align: center;
+    padding: 50px 20px;
 }
 
-section.about {
-    padding: 2rem;
+.intro-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
 }
 
-section.team {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-section.shop {
-    padding: 2rem;
-}
-
-.product {
-    margin-bottom: 2rem;
-}
-
-.product img {
-    width: 100%;
-}
-
-.team-member {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.team-member img {
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.member-details {
-    flex: 1;
-}
-
-.member-details h4 {
-    margin-bottom: 5px;
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
     color: #4CAF50;
 }
 
-.member-details p {
-    margin-bottom: 10px;
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive styles for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
-    .team-member {
-        flex-direction: column;
-        align-items: center;
+    .intro-text h1 {
+        font-size: 2em;
     }
 
-    .team-member img {
-        margin-bottom: 15px;
+    .intro-text p {
+        font-size: 1em;
     }
-}
-.price {
-    font-weight: bold;
-    color: #cc6600;
+
+    .btn {
+        font-size: 1em;
+    }
 }
