@@ -62,6 +62,31 @@ footer {
     margin-bottom: 10px;
 }
 
+nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Responsive styles for screens smaller than 768px (typical smartphones) */
+@media only screen and (max-width: 768px) {
+    nav {
+        text-align: left;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0;
+        font-size: 1em;
+    }
+}
 @media only screen and (max-width: 768px) {
     header {
         font-size: 1.5em;
