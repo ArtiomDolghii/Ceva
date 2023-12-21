@@ -74,16 +74,6 @@ section.team {
     flex-wrap: wrap;
 }
 
-.team-member {
-    text-align: center;
-    margin: 1rem;
-}
-
-.team-member img {
-    width: 100%;
-    border-radius: 50%;
-}
-
 section.shop {
     padding: 2rem;
 }
@@ -95,7 +85,7 @@ section.shop {
 .product img {
     width: 100%;
 }
-////////////////////////////////////////////////////////////////////
+
 .team-member {
     display: flex;
     align-items: center;
